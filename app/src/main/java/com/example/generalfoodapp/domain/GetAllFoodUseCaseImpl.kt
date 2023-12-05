@@ -4,9 +4,9 @@ import com.example.generalfoodapp.data.prefence.Repository.GetAllFoodsRepositori
 import com.example.generalfoodapp.data.prefence.model.FoodModel
 
 
-class GetAllFoodUseCaseImpl: GetAllFoodUseCase {
+class GetAllFoodUseCaseImpl : GetAllFoodUseCase {
     private val foodsRepository = GetAllFoodsRepositoriesImpl()
-    override suspend fun getAllFoods(): List<FoodModel>{
+    override suspend fun getAllFoods(): List<FoodModel> {
         return foodsRepository.getAllFoodsAsync()
     }
 }

@@ -8,4 +8,13 @@
     <string name="tab">Sweets</string>
     <string name="cakes">Cakes</string>
     <string name="candey">Candey</string>
+    <string name="add_to_basket">Add To Basket</string>
+    <string name="_12">12</string>
+    <string name="dollar">$</string>
+    <string name="grilled_beef">Grilled Beef</string>
+    <string name="spicy">Spicy grilled beef \n with special seasoning</string>
+    <string name="delete">Delete</string>
+    <string name="donuts">Donuts</string>
+    <string name="about_this_product">About This Product</string>
+    <string name="kmkcdckmc">kmkcdckmc</string>
 </resources>

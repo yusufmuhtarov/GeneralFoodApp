@@ -9,7 +9,7 @@ import com.example.generalfoodapp.data.prefence.model.FoodModel
 import com.example.generalfoodapp.domain.GetAllFoodUseCaseImpl
 import kotlinx.coroutines.launch
 
-class MainScreenViewModel:ViewModel() {
+class MainScreenViewModel : ViewModel() {
     private val getAllFoodUseCase = GetAllFoodUseCaseImpl()
 
     val foodLivaData: MutableLiveData<List<FoodModel>> = MutableLiveData()
@@ -20,7 +20,7 @@ class MainScreenViewModel:ViewModel() {
 
     private fun getAllFoods() {
         viewModelScope.launch {
-         val response = getAllFoodUseCase.getAllFoods()
+            val response = getAllFoodUseCase.getAllFoods()
             foodLivaData.postValue(response)
         }
     }

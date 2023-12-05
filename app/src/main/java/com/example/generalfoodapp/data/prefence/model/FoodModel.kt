@@ -1,8 +1,10 @@
 package com.example.generalfoodapp.data.prefence.model
 
-data class FoodModel (
+import java.io.Serializable
+
+data class FoodModel(
     val name: String,
     val description: String,
     val price: Int,
     val img: String,
-    )
+) : Serializable

@@ -5,6 +5,6 @@ import com.example.generalfoodapp.data.prefence.model.FoodModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class GetAllFoodsRepositoriesImpl:GetAllFoodRepository{
+class GetAllFoodsRepositoriesImpl : GetAllFoodRepository {
     override suspend fun getAllFoodsAsync(): List<FoodModel> = foodFakeDatas()
 }

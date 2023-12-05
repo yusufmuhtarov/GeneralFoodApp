@@ -7,4 +7,13 @@
         <item name="cornerSizeTopRight">50dp</item>
         <item name="cornerSizeBottomLeft" >0dp</item>
     </style>
+
+    <style name="DetailsCardVIew" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeTopLeft">8dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft" >8dp</item>
+    </style>
+
 </resources>

@@ -5,5 +5,7 @@
     <color name="unBoardingColor">#2F2E41</color>
     <color name="green">#22C7A9</color>
     <color name="CardViewCl">#3F3D56</color>
-    <color name="btnColor">#FFB9B9</color>
+    <color name="btnColor">#fbb395</color>
+    <color name="cardViewColor">#FCB495A1</color>
+    <color name="button">#3F3D56</color>
 </resources>

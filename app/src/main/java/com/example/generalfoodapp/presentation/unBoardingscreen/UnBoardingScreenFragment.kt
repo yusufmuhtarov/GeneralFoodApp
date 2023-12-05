@@ -22,23 +22,45 @@ class OnBoardingScreenFragment : Fragment() {
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View = binding.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if (sharedPreferences.getIsUserFirstSign()) {
-            findNavController().navigate(
-                R.id.action_unBoardingScreenFragment_to_mainScreenFragment
-            )
-        } else {
-            binding.getStartedBtn.setOnClickListener {
-                sharedPreferences.setUserFirstSign(true)
-                findNavController().navigate(
-                    R.id.action_unBoardingScreenFragment_to_mainScreenFragment
-                )
-            }
+//        clickListener()
+        setUpClickListeners()
+        checkFirstUser()
+        statusBarColor()
+    }
+
+//    private fun clickListener() {
+//        if (sharedPreferences.getIsUserFirstSign()) {
+//            findNavController().navigate(
+//                R.id.action_unBoardingScreenFragment_to_mainScreenFragment
+//            )
+//        } else {
+//            binding.getStartedBtn.setOnClickListener {
+//                sharedPreferences.setUserFirstSign(true)
+//                findNavController().navigate(
+//                    R.id.action_unBoardingScreenFragment_to_mainScreenFragment
+//                )
+//            }
+//        }
+//    }
+
+    private fun statusBarColor() {
+        requireActivity().window?.statusBarColor = resources.getColor(R.color.unBoardingColor)
+        requireActivity().window?.navigationBarColor = resources.getColor(R.color.unBoardingColor)
+    }
+    private fun setUpClickListeners() = binding.apply {
+        getStartedBtn.setOnClickListener {
+            sharedPreferences.setUserFirstSign(true)
+            findNavController().navigate(R.id.action_unBoardingScreenFragment_to_mainScreenFragment)
         }
+    }
+
+    private fun checkFirstUser() {
+        if (sharedPreferences.getIsUserFirstSign())
+            findNavController().navigate(R.id.action_unBoardingScreenFragment_to_mainScreenFragment)
     }
 }
