@@ -41,7 +41,7 @@ class MainScreenFragment : Fragment() {
     }
 
     private fun statusBarColor() {
-        requireActivity().window?.statusBarColor = resources.getColor(R.color.unBoardingColor)
-        requireActivity().window?.navigationBarColor = resources.getColor(R.color.unBoardingColor)
+        requireActivity().window?.statusBarColor = resources.getColor(R.color.btnColor)
+        requireActivity().window?.navigationBarColor = resources.getColor(R.color.white)
     }
 }

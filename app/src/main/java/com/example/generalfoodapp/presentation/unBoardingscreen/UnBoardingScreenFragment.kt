@@ -28,7 +28,7 @@ class OnBoardingScreenFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if (!sharedPreferences.getIsUserFirstSign()) {
+        if (sharedPreferences.getIsUserFirstSign()) {
             findNavController().navigate(
                 R.id.action_unBoardingScreenFragment_to_mainScreenFragment
             )
